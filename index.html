@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
   <title>Rock Paper Scissors</title>
@@ -10,17 +10,126 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-  <main>
+<body class="d-flex flex-column h-100 bg-dark text-light">
+  <main class="flex-shrink-0">
     <div class="container-fluid text-center">
         <h1 class="display-1">ROCK - PAPER - SCISSORS</h1>
+        <p class="lead mb-2">
+            Do you have what it takes to beat AI overlords?
+        </p>
+        <p class="fst-normal">First player to reach 5 is winner!</p>
+
+        <!-- CONTAINERS -->
+        <div class="container-fluid mt-5">
+          <div class="row justify-content-center align-items-center g-2">
+            <div class="col-5">
+              <!-- PLAYER CONTAINER -->
+              <h1 class="display-2">PLAYER</h1>
+              <div class="container-fluid">
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col text-end">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/vusrdugn.json"
+                      trigger="hover"
+                      colors="primary:#121331,secondary:#b26836,tertiary:#4bb3fd,quaternary:#f9c9c0,quinary:#ebe6ef"
+                      style="width:100px;height:100px">
+                    </lord-icon>
+                  </div>
+                  <div class="col">
+                    <p class="lead text-start">
+                        SCORE: <span>0</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" id="rock" class="btn btn-light">
+                        <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" id="paper" class="btn btn-light">
+                        <i class="fa-regular fa-hand fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" id="scissors" class="btn btn-light">
+                        <i class="fa-regular fa-hand-scissors fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-2">
+              
+            </div>
+
+            <!-- COMPUTER CONTAINER -->
+            <div class="col-5">
+              <h1 class="display-2">COMPUTER</h1>
+              <div class="container-fluid">
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col text-end">
+                    <lord-icon
+                      src="https://cdn.lordicon.com/suhrifrv.json"
+                      trigger="hover"
+                      colors="outline:#121331,primary:#3a3347,secondary:#08a88a,tertiary:#ebe6ef"
+                      style="width:100px;height:100px">
+                    </lord-icon>
+                  </div>
+                  <div class="col">
+                    <p class="lead text-start">
+                        SCORE: <span>0</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-light">
+                        <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-light">
+                        <i class="fa-regular fa-hand fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-light">
+                        <i class="fa-regular fa-hand-scissors fa-2xl"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
     </div>
   </main>
-  <footer>
-    <!-- place footer here -->
+  <footer class="mt-auto py-3 bg-secondary">
+    <div class="container">
+      <p class="text-center">&#169;<span id="year"></span> Made with &hearts; by <a href="https://github.com/Nikoraii" target="__blank">Nikoraii</a></p>
+    </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -30,6 +139,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+  <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
