@@ -1,5 +1,8 @@
 const ROUNDS = 5;
 
+let date =  new Date().getFullYear();
+document.getElementById("year").textContent = date;
+
 let playerWins = 0;
 let computerWins = 0;
 let winner = "";
