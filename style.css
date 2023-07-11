@@ -1,0 +1,10 @@
+#git-link {
+    text-decoration: none;
+    color: rgb(224, 222, 255);
+    font-weight: bold;
+}
+
+#git-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
