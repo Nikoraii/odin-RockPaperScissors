@@ -43,28 +43,28 @@
                   </div>
                   <div class="col">
                     <p class="lead text-start">
-                        SCORE: <span>0</span>
+                        SCORE: <span id="player-score">0</span>
                     </p>
                   </div>
                 </div>
                 <div class="row justify-content-center align-items-center g-2">
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" id="rock" class="btn btn-light">
+                      <button type="button" id="rock" class="btn btn-light player-button">
                         <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" id="paper" class="btn btn-light">
+                      <button type="button" id="paper" class="btn btn-light player-button">
                         <i class="fa-regular fa-hand fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" id="scissors" class="btn btn-light">
+                      <button type="button" id="scissors" class="btn btn-light player-button">
                         <i class="fa-regular fa-hand-scissors fa-2xl"></i>
                       </button>
                     </div>
@@ -74,7 +74,26 @@
             </div>
 
             <div class="col-2">
-              <h1 class="display-3 text-danger">VS</h1>
+              <h1 class="display-1 text-danger">VS</h1>
+            </div>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content bg-dark">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">GAME OVER</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Restart the game and play again?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="restart-game" class="btn btn-success" data-bs-dismiss="modal">PLAY AGAIN</button>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- COMPUTER CONTAINER -->
@@ -92,28 +111,28 @@
                   </div>
                   <div class="col">
                     <p class="lead text-start">
-                        SCORE: <span>0</span>
+                        SCORE: <span id="computer-score">0</span>
                     </p>
                   </div>
                 </div>
                 <div class="row justify-content-center align-items-center g-2">
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn-light" id="computer-rock">
                         <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn-light" id="computer-paper">
                         <i class="fa-regular fa-hand fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light">
+                      <button type="button" class="btn btn-light" id="computer-scissors">
                         <i class="fa-regular fa-hand-scissors fa-2xl"></i>
                       </button>
                     </div>
