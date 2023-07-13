@@ -19,14 +19,14 @@
 <body class="d-flex flex-column h-100 bg-dark text-light">
   <main class="flex-shrink-0">
     <div class="container-fluid text-center">
-        <h1 class="display-1">ROCK - PAPER - SCISSORS</h1>
-        <p class="lead mb-2">
+        <h1 class="display-5 text-secondary">ROCK - PAPER - SCISSORS</h1>
+        <p class="mb-2">
             Do you have what it takes to beat AI overlords?
         </p>
-        <p class="fst-normal">First player to reach 5 is winner!</p>
+        <p class="fst-normal">First player to reach 5 is the winner!</p>
 
         <!-- CONTAINERS -->
-        <div class="container-fluid mt-5">
+        <div class="container-fluid mt-5" id="main-container">
           <div class="row justify-content-center align-items-center g-2">
             <!-- PLAYER CONTAINER -->
             <div class="col-5 border border-2 border-white rounded pb-2">
@@ -43,7 +43,7 @@
                   </div>
                   <div class="col">
                     <p class="lead text-start">
-                        SCORE: <span id="player-score">0</span>
+                        SCORE: <span id="player-score" class="text-info">0</span>
                     </p>
                   </div>
                 </div>
@@ -90,7 +90,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" id="restart-game" class="btn btn-success" data-bs-dismiss="modal">PLAY AGAIN</button>
+                    <button type="button" id="restart-game" class="btn btn-primary" data-bs-dismiss="modal">PLAY AGAIN</button>
                   </div>
                 </div>
               </div>
@@ -111,28 +111,28 @@
                   </div>
                   <div class="col">
                     <p class="lead text-start">
-                        SCORE: <span id="computer-score">0</span>
+                        SCORE: <span id="computer-score" class="text-info">0</span>
                     </p>
                   </div>
                 </div>
                 <div class="row justify-content-center align-items-center g-2">
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light" id="computer-rock">
+                      <button type="button" class="btn btn-light computer-button" id="computer-rock">
                         <i class="fa-regular fa-hand-back-fist fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light" id="computer-paper">
+                      <button type="button" class="btn btn-light computer-button" id="computer-paper">
                         <i class="fa-regular fa-hand fa-2xl"></i>
                       </button>
                     </div>
                   </div>
                   <div class="col">
                     <div class="d-grid gap-2">
-                      <button type="button" class="btn btn-light" id="computer-scissors">
+                      <button type="button" class="btn btn-light computer-button" id="computer-scissors">
                         <i class="fa-regular fa-hand-scissors fa-2xl"></i>
                       </button>
                     </div>
@@ -142,12 +142,29 @@
             </div>
 
           </div>
+
+          <div class="row justify-content-center align-items-center g-2 mt-2">
+            <div class="col">
+              <p class="lead" id="round-text">
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center align-items-center g-2 mt-5">
+            <div class="col">
+              <h1 class="display-1" id="game-result"></h1>
+              <p class="lead" id="end-text">
+              </p>
+              <button type="button" id="play-again-page" class="btn btn-primary hidden">PLAY AGAIN</button>
+            </div>
+          </div>
+
         </div>
     </div>
   </main>
   <footer class="mt-auto pt-3 bg-secondary">
     <div class="container">
-      <p class="text-center">&#169;<span id="year"></span> Made with &hearts; by <a href="https://github.com/Nikoraii" target="__blank" id="git-link">Nikoraii</a>.</p>
+      <p class="text-center">&#169;<span id="year"></span> Made with &hearts; by <a href="https://github.com/Nikoraii" target="__blank" id="git-link">Nikoraii <i class="fa-brands fa-github"></i></a>.</p>
     </div>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
@@ -159,7 +176,9 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
   <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-  <script src="script.js"></script>
+  <script src="src/js/utils/utils.js" type="module"></script>
+  <script src="src/js/components/footer/footer.js" type="module"></script>
+  <script src="src/js/main.js" type="module"></script>
 </body>
 
 </html>
