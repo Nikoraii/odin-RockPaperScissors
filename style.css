@@ -8,3 +8,32 @@
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+
+.using {
+    background-color: #198754!important;
+    animation: grow-animation 1s linear;
+}
+
+@keyframes grow-animation {
+    0% { 
+        transform: scale(1); 
+        transform: translateY(0px);
+    }
+    50% {
+        transform: scale(1.1);
+        transform: translateY(-1px);
+     }
+    100% {
+        transform: scale(1);
+        transform: translateY(0px);
+     }
+}
+
+.computer-using {
+    background-color: #ffc107!important;
+    animation: grow-animation 1s linear;
+}
+
+.hidden {
+    visibility: hidden;
+}
