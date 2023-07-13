@@ -1,4 +1,4 @@
-import {playRound, getComputerChoice} from './gameLogic.js';
+import {playRound, getComputerChoice} from './game-logic.js';
 import {
   updateScore, showEndGameResult, showRoundText, showPlayAgainButton,
   showModal, addColors, removeColors, clearGameResult, clearRoundText,
